@@ -1,0 +1,23 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito-client-1:
+            client-id: 39ee4sn2cd5tkv8lpsu1r52pch
+            client-secret: 3o15bj1i2fssqmqqgkt2e5m5gkpn7alhjuc1uo6hiib4rtp3kov
+            client-name: naukri_app_client
+            provider: cognito
+            scope: openid
+            redirect-uri-template: http://localhost:8080/login/oauth2/code/cognito
+            redirect-uri: http://localhost:8080/login/oauth2/code/cognito
+            authorization-grant-type: authorization_code
+        provider:
+          cognito:
+            authorization-uri: https://naukriapp.auth.eu-west-2.amazoncognito.com/oauth2/authorize
+            token-uri: https://naukriapp.auth.eu-west-2.amazoncognito.com/oauth2/token
+            user-info-uri: https://naukriapp.auth.eu-west-2.amazoncognito.com/oauth2/userInfo
+            jwk-set-uri: https://cognito-idp.eu-west-2.amazonaws.com/eu-west-2_dttVj1rK0
+            issuerUri: https://cognito-idp.eu-west-2.amazonaws.com/eu-west-2_dttVj1rK0
+
+            user-name-attribute: cognito:username

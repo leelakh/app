@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito:
+            clientId: 39ee4sn2cd5tkv8lpsu1r52pch
+            clientSecret: 3o15bj1i2fssqmqqgkt2e5m5gkpn7alhjuc1uo6hiib4rtp3kov
+            scope: openid
+            redirect-uri-template: http://localhost:8080/login/oauth2/code/cognito
+            clientName: naukri_app_client
+        provider:
+          cognito:
+            issuerUri: https://cognito-idp.eu-west-2.amazonaws.com/eu-west-2_dttVj1rK0
+            user-name-attribute: cognito:username
